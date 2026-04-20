@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Quest</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Instruction Overlay -->
+  <div id="instruction-overlay" class="overlay">
+    <div class="overlay-card">
+      <h2>💧 Water Quest</h2>
+      <p class="goal">
+        Collect water cans before time runs out and help support clean water access.
+      </p>
+
+      <div class="difficulty-box">
+        <h3>Choose Difficulty</h3>
+        <div class="difficulty-buttons">
+          <button class="difficulty-btn active" data-mode="easy">Easy</button>
+          <button class="difficulty-btn" data-mode="normal">Normal</button>
+          <button class="difficulty-btn" data-mode="hard">Hard</button>
+        </div>
+        <p id="difficulty-details" class="difficulty-details">
+          Easy: Collect 15 cans in 35 seconds
+        </p>
+      </div>
+
+      <ul class="instructions-list">
+        <li>Click the water cans as fast as you can</li>
+        <li>Each can gives you +1 point</li>
+        <li>Different levels change the time and goal</li>
+        <li>Milestones will encourage you as you play</li>
+        <li>Sound effects play when you interact</li>
+      </ul>
+
+      <button id="start-from-overlay">Start Game</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>💧 Water Quest</h1>
+    <p class="game-instructions">
+      Help collect clean water for communities in need.
+    </p>
+
+    <div class="difficulty-display">
+      Difficulty: <span id="current-difficulty">Easy</span>
+    </div>
+
+    <div class="stats">
+      <p>Cans Collected: <span id="current-cans">0</span></p>
+      <p>Goal: <span id="goal-display">15</span></p>
+      <p>Time Left: <span id="timer">35</span>s</p>
+    </div>
+
+    <div id="milestone-message" class="milestone-message"></div>
+    <div id="achievements" class="achievement"></div>
+
+    <div class="game-grid"></div>
+
+    <div class="button-row">
+      <button id="start-game">Start Game</button>
+      <button id="reset-game">Play Again</button>
+    </div>
+
+    <footer class="game-footer">
+      <p>Learn more about the mission behind this game.</p>
+      <div class="footer-links">
+        <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">Visit charity: water</a>
+        <a href="https://www.charitywater.org/donate" target="_blank" rel="noopener noreferrer">Donate to clean water</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
